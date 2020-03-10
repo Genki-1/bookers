@@ -1,2 +1,15 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebCampBackendNew</title>
+</head>
+<body>
+	<p><span>title:</span><%= @book.title %></p>
+	<p><span>body:</span><%= @book.body %></p>
+
+		<%=link_to "Edit", edit_book_path(@book) %>
+		|
+		<%=link_to "Back", "/books" %>
+	
+</body>
+</html>
