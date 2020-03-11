@@ -6,7 +6,16 @@
 <body>
 
 	<h1>Editing Book</h1>
+
+	<% @book.errors.full_messages.each do |message| %>
+        <div class="form-error">
+           <%= message %>
+        </div>
+    <% end %>
+
 	<%= form_for(@book) do |b| %>
+
+
 		<div class="field">
 	    	<h4>Title</h4>
 	    	<%= b.text_field :title %>
