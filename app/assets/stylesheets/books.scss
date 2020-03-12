@@ -70,3 +70,46 @@ span {
 .root {
 	margin: 33px;
 }
+
+#error_explanation {
+	border: solid 2px #DD0000;
+	width: 450px;
+}
+
+#error_explanation h4 {
+	background-color: #DD0000;
+	color: white;
+	padding: 5px;
+}
+
+#error_explanation ul {
+	padding-top: 30px;
+    padding-left: 80px;
+    padding-bottom: 30px;
+    background-color: #f0f0f0;
+}
+
+#error_explanation li {
+	font-size: 12px;
+    list-style: square;
+}
+
+.field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table;
+}
+
+.field_with_errors {
+	padding: 2px;
+    background-color: red;
+    display: table;
+}
+
+.field_with_errors:nth-child(odd) {
+	padding: 2px;
+    background-color: red;
+    display: table;
+    margin-bottom: 0px;
+}
+

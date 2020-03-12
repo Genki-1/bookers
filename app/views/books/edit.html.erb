@@ -7,22 +7,29 @@
 
 	<h1>Editing Book</h1>
 
-	<% @book.errors.full_messages.each do |message| %>
-        <div class="form-error">
-           <%= message %>
-        </div>
+	<% if @book.errors.any? %>
+      <div id="error_explanation">
+        <h4><%= @book.errors.count %> errors prohibited this book from being saved:</h4>
+ 
+        <ul>
+          <% @book.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
     <% end %>
+
 
 	<%= form_for(@book) do |b| %>
 
 
 		<div class="field">
-	    	<h4>Title</h4>
+	    	<%= b.label :title, "Title" %>
 	    	<%= b.text_field :title %>
 	    </div>
 
 	    <div class="field">
-	    	<h4>Body</h4>
+	    	<%= b.label :body, "Body" %>
 	    	<%= b.text_area :body %>
 	    </div>
 
@@ -39,4 +46,5 @@
 	
 </body>
 </html>
+
 
